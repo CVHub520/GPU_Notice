@@ -1,0 +1,20 @@
+FROM_MAIL: '你申请的邮箱 xxx@163.com'
+SMTP_SERVER: 'smtp.163.com' # 不同的邮件服务商可能有所不同
+SSL_PORT: '465' # 不同的邮件服务商可能有所不同
+USER_PWD: "SMTP授权码"
+
+MAIL_LIST: # 接受邮件的列表
+  - '12345678@qq.com'
+SKIP_TIME: # 不发邮件的时间 24小时制
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+TRIGGER_MODE: 'ET' # 水平触发：LT 边缘触发:ET
+LT_MAIL_CD : 3600 # 水平触发的情况下，发邮件的冷却时间 单位秒
+ET_MAIL_CD : 300 # 边缘触发的情况下，发邮件的冷却时间 单位秒
+QUERY_CD: 60 # 扫描显卡状态的CD
+QUERY_FUNC: "memory"
